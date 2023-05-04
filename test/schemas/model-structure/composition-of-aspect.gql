@@ -30,9 +30,8 @@ input CompositionOfAspectService_Books_C {
 }
 
 input CompositionOfAspectService_Books_U {
-  chapters: [CompositionOfAspectService_Books_chapters_U]
-  id: ID
-  reviews: [CompositionOfAspectService_Books_reviews_U]
+  chapters: [CompositionOfAspectService_Books_chapters_C]
+  reviews: [CompositionOfAspectService_Books_reviews_C]
 }
 
 type CompositionOfAspectService_Books_chapters {
@@ -40,10 +39,6 @@ type CompositionOfAspectService_Books_chapters {
 }
 
 input CompositionOfAspectService_Books_chapters_C {
-  id: ID
-}
-
-input CompositionOfAspectService_Books_chapters_U {
   id: ID
 }
 
@@ -61,12 +56,8 @@ type CompositionOfAspectService_Books_chapters_input {
     input: [CompositionOfAspectService_Books_chapters_C]!
   ): [CompositionOfAspectService_Books_chapters]
   delete(
-    filter: [CompositionOfAspectService_Books_chapters_filter]
+    filter: [CompositionOfAspectService_Books_chapters_filter]!
   ): Int
-  update(
-    filter: [CompositionOfAspectService_Books_chapters_filter]
-    input: CompositionOfAspectService_Books_chapters_U!
-  ): [CompositionOfAspectService_Books_chapters]
 }
 
 input CompositionOfAspectService_Books_chapters_orderBy {
@@ -87,10 +78,10 @@ type CompositionOfAspectService_Books_input {
     input: [CompositionOfAspectService_Books_C]!
   ): [CompositionOfAspectService_Books]
   delete(
-    filter: [CompositionOfAspectService_Books_filter]
+    filter: [CompositionOfAspectService_Books_filter]!
   ): Int
   update(
-    filter: [CompositionOfAspectService_Books_filter]
+    filter: [CompositionOfAspectService_Books_filter]!
     input: CompositionOfAspectService_Books_U!
   ): [CompositionOfAspectService_Books]
 }
@@ -104,10 +95,6 @@ type CompositionOfAspectService_Books_reviews {
 }
 
 input CompositionOfAspectService_Books_reviews_C {
-  id: ID
-}
-
-input CompositionOfAspectService_Books_reviews_U {
   id: ID
 }
 
@@ -125,12 +112,8 @@ type CompositionOfAspectService_Books_reviews_input {
     input: [CompositionOfAspectService_Books_reviews_C]!
   ): [CompositionOfAspectService_Books_reviews]
   delete(
-    filter: [CompositionOfAspectService_Books_reviews_filter]
+    filter: [CompositionOfAspectService_Books_reviews_filter]!
   ): Int
-  update(
-    filter: [CompositionOfAspectService_Books_reviews_filter]
-    input: CompositionOfAspectService_Books_reviews_U!
-  ): [CompositionOfAspectService_Books_reviews]
 }
 
 input CompositionOfAspectService_Books_reviews_orderBy {
